@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: 'Poppins', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.greetings div {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.greetings span {
+    animation: glowLetter 0.2s ease-in-out forwards; 
+}
+
+@keyframes glowLetter {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        color: #fff; /* Keep the text color white */
+        text-shadow: 0 0 12px #ffd700, 0 0 50px #ffd700, 0 0 100px #ffd700; /* Yellow glow */
+    }
+}
+
+.all-glow {
+    animation: glowAll 2s infinite;  
+}
+
+@keyframes glowAll {
+    50% {
+        text-shadow: 0 0 20px #ffd700, 0 0 80px #ffd700, 0 0 150px #ffd700; /* Yellow glow */
+    }
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7300; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+.button a:hover {
+    background-color: #dd4c08;
+}
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 574px) {
+    .greetings div {
+        font-size: 2rem;
+    }
+}
+
